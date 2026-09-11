@@ -159,7 +159,7 @@ Beyond the in-process `schema.json` compile (`dh_compile.py`), the app can
 trigger a full DataHarmonizer web bundle rebuild (webpack build, not just the
 schema compile) for a session, via a sibling Docker container — the same
 on-demand-rebuild pattern `mimicc-ena-submission-assistant` uses, sharing the
-exact same [dh-builder](https://github.com/timrozday-mgnify/dh-builder) image
+exact same [dh-builder](https://github.com/EBI-Metagenomics/dh-builder) image
 (built locally as `dh-builder`, run here with
 `TEMPLATE=template_builder_preview` — `mimicc-ena-submission-assistant` runs
 the identical image with `TEMPLATE=mimicc`):
@@ -180,9 +180,9 @@ the `dh-builder` image built once (shared with `mimicc-ena-submission-assistant`
 if you also run that app — no need to build it twice):
 
 ```bash
-git clone --branch v0.1.0 https://github.com/timrozday-mgnify/dh-builder.git ../dh-builder
+git clone --branch v0.1.0 https://github.com/EBI-Metagenomics/dh-builder.git ../dh-builder
 docker build -f ../dh-builder/Dockerfile \
-  --build-context dataharmonizer-src=https://github.com/timrozday-mgnify/DataHarmonizer.git#v2.1.0-mimicc \
+  --build-context dataharmonizer-src=https://github.com/EBI-Metagenomics/DataHarmonizer.git#v2.1.0-mimicc \
   -t dh-builder ../dh-builder
 ```
 
@@ -202,7 +202,7 @@ All sibling-repo code is pulled at a fixed git tag, never a local checkout or
 
 - **`requirements.txt`** (and `pyproject.toml`'s `app` extra) —
   `linkml-lib` and `dh-builder-lib` as
-  `name @ git+https://github.com/timrozday-mgnify/<repo>.git@<tag>` lines.
+  `name @ git+https://github.com/EBI-Metagenomics/<repo>.git@<tag>` lines.
 - **`docker-compose.yml`** — the `app` service's
   `build.additional_contexts.dataharmonizer-src` git URL
   (`...git#<tag>`); the manual `dh-builder` image build command above pins
