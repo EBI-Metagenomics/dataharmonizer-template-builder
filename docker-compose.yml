@@ -6,7 +6,7 @@ services:
       # versions". linkml-lib and dh-builder-lib are pinned pip dependencies
       # in requirements.txt instead, no build context needed for them.
       additional_contexts:
-        dataharmonizer-src: https://github.com/timrozday-mgnify/DataHarmonizer.git#v2.1.0-mimicc
+        dataharmonizer-src: https://github.com/EBI-Metagenomics/DataHarmonizer.git#v2.1.0-mimicc
     environment:
       DATAHARMONIZER_DIR: /DataHarmonizer
       # Named Docker volumes shared with the dh-builder sibling container

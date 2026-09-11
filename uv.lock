@@ -502,12 +502,12 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dh-builder-lib", marker = "extra == 'app'", git = "https://github.com/timrozday-mgnify/dh-builder.git?rev=v0.1.0" },
+    { name = "dh-builder-lib", marker = "extra == 'app'", git = "https://github.com/EBI-Metagenomics/dh-builder.git?rev=v0.1.0" },
     { name = "django", marker = "extra == 'app'", specifier = ">=5,<6" },
     { name = "django-cors-headers", marker = "extra == 'app'" },
     { name = "gunicorn", marker = "extra == 'app'" },
     { name = "linkml", marker = "extra == 'app'", specifier = ">=1.7" },
-    { name = "linkml-lib", marker = "extra == 'app'", git = "https://github.com/timrozday-mgnify/linkml-lib.git?rev=v0.1.0" },
+    { name = "linkml-lib", marker = "extra == 'app'", git = "https://github.com/EBI-Metagenomics/linkml-lib.git?rev=v0.1.0" },
     { name = "linkml-runtime", marker = "extra == 'app'", specifier = ">=1.8" },
     { name = "pydantic", marker = "extra == 'app'", specifier = ">=2" },
     { name = "pyyaml", marker = "extra == 'app'", specifier = ">=6" },
@@ -541,7 +541,7 @@ wheels = [
 [[package]]
 name = "dh-builder-lib"
 version = "0.1.0"
-source = { git = "https://github.com/timrozday-mgnify/dh-builder.git?rev=v0.1.0#d1f2a91eae04422fbbc7ad947f543cde56d6d3c9" }
+source = { git = "https://github.com/EBI-Metagenomics/dh-builder.git?rev=v0.1.0#d1f2a91eae04422fbbc7ad947f543cde56d6d3c9" }
 
 [[package]]
 name = "distlib"
@@ -1062,7 +1062,7 @@ wheels = [
 [[package]]
 name = "linkml-lib"
 version = "0.1.0"
-source = { git = "https://github.com/timrozday-mgnify/linkml-lib.git?rev=v0.1.0#49469d80106b9fec1bebc771bbe6f25ff4379f7b" }
+source = { git = "https://github.com/EBI-Metagenomics/linkml-lib.git?rev=v0.1.0#49469d80106b9fec1bebc771bbe6f25ff4379f7b" }
 dependencies = [
     { name = "linkml" },
     { name = "linkml-runtime" },
